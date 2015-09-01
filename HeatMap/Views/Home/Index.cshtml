@@ -1,0 +1,178 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+
+    <!-- Chartbeat Time Capture -->
+    <script type="text/javascript">var _sf_startpt = (new
+		Date()).getTime();
+    </script>
+
+    <title>Heat Map NYC</title>
+
+    <meta name="author" content="WNYC Data News" />
+    <meta name="description" content="A dataviz project by the WNYC Data News Team." />
+    <meta name="robots" content="index, follow" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Web app-able -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="icon" href="/Content/icon/favicon.ico" type="image/gif" sizes="16x16">
+    <!-- all the CSS -->
+    <link rel="stylesheet" href="/Content/css/styles.css" type="text/css" />
+    <link rel='stylesheet' href='/Content/css/font.css' type='text/css'>
+    <link rel="stylesheet" href="/Content/font-awesome/css/font-awesome.min.css">
+
+    <!-- all the JS -->
+    <script type="text/javascript" src="/Content/js/css3-mediaqueries.js"></script>
+    <script type="text/javascript" src="/Content/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/Content/js/underscore-min.js"></script>
+    <script type="text/javascript" src="/Content/js/moment.min.js"></script>
+    <script type="text/javascript" src="/Content/js/topojson.js"></script>
+    <script type="text/javascript" src="/Content/js/script.js"></script>
+
+    <!-- Add additional script calls go here -->
+    <!-- MapBox -->
+    <script type="text/javascript" src='/Content/js/mapbox.js'></script>
+    <script type="text/javascript" src="/Content/js/leaflet-pip.min.js"></script>
+    <link rel='stylesheet' href='/Content/css/mapbox.css' />
+    <!--[if lte IE 8]>
+        <link href='/Content/css/mapbox.ie.css' rel='stylesheet' />
+    <![endif] -->
+    <script src="/Content/js/mapboxmaps.js" type="text/javascript" charset="utf-8"></script>
+
+    <link rel='stylesheet' href='/Content/css/site.css' />
+    <!-- Facebook Og Tags -->
+    <!-- <meta property="og:type" content="website" />
+<meta property="og:url" content="http://project.wnyc.org/transit-time/" />
+<meta property="og:title" content="Transit Time NYC" />
+<meta property="og:description" content="Travel times from any point in NYC to everywhere else via subway or on foot. (Staten Island Railway is included; bike share isn't.) Click the map or enter a location." />
+<meta property="og:image" content="http://project.wnyc.org/transit-time/img/fb-detail.png" />
+ -->
+
+    <!-- Start Google Analytic Code -->
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-283599-23']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type =
+         'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' :
+         'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+    <!-- End Google Analytic Code -->
+
+</head>
+
+<body>
+
+    <div id="container">
+
+        <div id="legend">
+
+            <div id="legendWide">
+                <ul>
+                    <li><span>
+                        <img src="/Content/img/tier1.png" alt="IMG">10 min</span></li>
+                    <li><span>
+                        <img src="/Content/img/tier2.png" alt="IMG">15 min</span></li>
+                    <li><span>
+                        <img src="/Content/img/tier3.png" alt="IMG">20 min</span></li>
+                    <li><span>
+                        <img src="/Content/img/tier4.png" alt="IMG">30 min</span></li>
+                    <li><span>
+                        <img src="/Content/img/tier5.png" alt="IMG">40 min</span></li>
+                    <li><span>
+                        <img src="/Content/img/tier6.png" alt="IMG">50 min</span></li>
+                    <li><span>
+                        <img src="/Content/img/tier7.png" alt="IMG">60 min</span></li>
+                    <li><span>
+                        <img src="/Content/img/tier8.png" alt="IMG">75 min</span></li>
+                    <li><span>
+                        <img src="/Content/img/tier9.png" alt="IMG">90 min</span></li>
+                    <li><span>
+                        <img src="/Content/img/tier10.png" alt="IMG">120 min</span></li>
+                </ul>
+            </div>
+
+            <div id="legendSet">
+                <div id="legendToggle">
+                    <span class="shortKey">View Key</span>
+                    <span class="longKey">10min &nbsp;
+                        <img src="/Content/img/tiers.png" alt="IMG" width="80" height="25">
+                        &nbsp; 120min</span>
+                    <i class="iconRight icon-caret-down"></i>
+                </div>
+                <div id="legendDrawer">
+                    <ul>
+                        <li><span>
+                            <img src="/Content/img/tier1.png" alt="IMG" width="25" height="25">10 min</span></li>
+                        <li><span>
+                            <img src="/Content/img/tier2.png" alt="IMG" width="25" height="25">15 min</span></li>
+                        <li><span>
+                            <img src="/Content/img/tier3.png" alt="IMG" width="25" height="25">20 min</span></li>
+                        <li><span>
+                            <img src="/Content/img/tier4.png" alt="IMG" width="25" height="25">30 min</span></li>
+                        <li><span>
+                            <img src="/Content/img/tier5.png" alt="IMG" width="25" height="25">40 min</span></li>
+                        <li><span>
+                            <img src="/Content/img/tier6.png" alt="IMG" width="25" height="25">50 min</span></li>
+                        <li><span>
+                            <img src="/Content/img/tier7.png" alt="IMG" width="25" height="25">60 min</span></li>
+                        <li><span>
+                            <img src="/Content/img/tier8.png" alt="IMG" width="25" height="25">75 min</span></li>
+                        <li><span>
+                            <img src="/Content/img/tier9.png" alt="IMG" width="25" height="25">90 min</span></li>
+                        <li><span>
+                            <img src="/Content/img/tier10.png" alt="IMG" width="25" height="25">120 min</span></li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div id="map">
+        </div>
+
+    </div>
+    <!-- #container -->
+
+    <script type="text/javascript" src="/Content/js/retina.js"></script>
+
+    <!-- Begin Chartbeat Code -->
+    <script type="text/javascript">
+        var _sf_async_config = { uid: 4030, domain: "project.wnyc.org" };
+        (function () {
+            function loadChartbeat() {
+                window._sf_endpt = (new Date()).getTime();
+                var e = document.createElement('script');
+                e.setAttribute('language', 'javascript');
+                e.setAttribute('type', 'text/javascript');
+                e.setAttribute('src',
+                   (("https:" == document.location.protocol) ?
+             "https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/" :
+             "http://static.chartbeat.com/") +
+                   "js/chartbeat.js");
+                document.body.appendChild(e);
+            }
+            var oldonload = window.onload;
+            window.onload = (typeof window.onload != 'function') ?
+                loadChartbeat : function () { oldonload(); loadChartbeat(); };
+        })();
+    </script>
+    <!-- End Chartbeat Code -->
+
+</body>
+
+</html>

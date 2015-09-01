@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HeatMapModelStoreContainer" CdmEntityContainer="HeatMapEntities">
+    <EntitySetMapping Name="locations">
+      <EntityTypeMapping TypeName="HeatMapModel.location">
+        <MappingFragment StoreEntitySet="location">
+          <ScalarProperty Name="cartodb_id" ColumnName="cartodb_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+          <ScalarProperty Name="the_geom" ColumnName="the_geom" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="cartodb_georef_status" ColumnName="cartodb_georef_status" />
+          <ScalarProperty Name="workstations" ColumnName="workstations" />
+          <ScalarProperty Name="laptops" ColumnName="laptops" />
+          <ScalarProperty Name="contact" ColumnName="contact" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

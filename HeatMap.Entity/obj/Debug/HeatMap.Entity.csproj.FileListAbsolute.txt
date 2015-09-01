@@ -1,0 +1,8 @@
+D:\Projects\DotNetApplication\Matthew\HeatMap\HeatMap.Entity\bin\Debug\HeatMap.Entity.dll.config
+D:\Projects\DotNetApplication\Matthew\HeatMap\HeatMap.Entity\bin\Debug\HeatMap.Entity.dll
+D:\Projects\DotNetApplication\Matthew\HeatMap\HeatMap.Entity\bin\Debug\HeatMap.Entity.pdb
+D:\Projects\DotNetApplication\Matthew\HeatMap\HeatMap.Entity\bin\Debug\EntityFramework.dll
+D:\Projects\DotNetApplication\Matthew\HeatMap\HeatMap.Entity\bin\Debug\EntityFramework.xml
+D:\Projects\DotNetApplication\Matthew\HeatMap\HeatMap.Entity\obj\Debug\HeatMap.Entity.csprojResolveAssemblyReference.cache
+D:\Projects\DotNetApplication\Matthew\HeatMap\HeatMap.Entity\obj\Debug\HeatMap.Entity.dll
+D:\Projects\DotNetApplication\Matthew\HeatMap\HeatMap.Entity\obj\Debug\HeatMap.Entity.pdb

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HeatMapModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="HeatMapEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="locations" EntityType="HeatMapModel.location" />
+  </EntityContainer>
+  <EntityType Name="location">
+    <Key>
+      <PropertyRef Name="cartodb_id" />
+    </Key>
+    <Property Name="cartodb_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="description" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="created_at" Type="DateTime" Precision="3" />
+    <Property Name="updated_at" Type="DateTime" Precision="3" />
+    <Property Name="the_geom" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="address" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="cartodb_georef_status" Type="Boolean" />
+    <Property Name="workstations" Type="Int32" />
+    <Property Name="laptops" Type="Int32" />
+    <Property Name="contact" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+</Schema>

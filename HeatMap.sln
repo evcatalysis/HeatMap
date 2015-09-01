@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeatMap", "HeatMap\HeatMap.csproj", "{DD1EC587-AB65-4175-B35A-10092818B882}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeatMap.Entity", "HeatMap.Entity\HeatMap.Entity.csproj", "{C6EC79BE-77F5-4268-B436-1EE4EDFABB17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeatMap.BLL", "HeatMap.BLL\HeatMap.BLL.csproj", "{736D2DD4-53F5-4AB1-9413-7022F871B190}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD1EC587-AB65-4175-B35A-10092818B882}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD1EC587-AB65-4175-B35A-10092818B882}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD1EC587-AB65-4175-B35A-10092818B882}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD1EC587-AB65-4175-B35A-10092818B882}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6EC79BE-77F5-4268-B436-1EE4EDFABB17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6EC79BE-77F5-4268-B436-1EE4EDFABB17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6EC79BE-77F5-4268-B436-1EE4EDFABB17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6EC79BE-77F5-4268-B436-1EE4EDFABB17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{736D2DD4-53F5-4AB1-9413-7022F871B190}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{736D2DD4-53F5-4AB1-9413-7022F871B190}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{736D2DD4-53F5-4AB1-9413-7022F871B190}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{736D2DD4-53F5-4AB1-9413-7022F871B190}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HeatMapModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="HeatMapModelStoreContainer">
+    <EntitySet Name="location" EntityType="HeatMapModel.Store.location" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="location">
+    <Key>
+      <PropertyRef Name="cartodb_id" />
+    </Key>
+    <Property Name="cartodb_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="nvarchar" MaxLength="150" />
+    <Property Name="description" Type="nvarchar" MaxLength="500" />
+    <Property Name="created_at" Type="datetime" />
+    <Property Name="updated_at" Type="datetime" />
+    <Property Name="the_geom" Type="nvarchar" MaxLength="500" />
+    <Property Name="address" Type="nvarchar" MaxLength="150" />
+    <Property Name="cartodb_georef_status" Type="bit" />
+    <Property Name="workstations" Type="int" />
+    <Property Name="laptops" Type="int" />
+    <Property Name="contact" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+</Schema>
